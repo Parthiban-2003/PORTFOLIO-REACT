@@ -1,8 +1,8 @@
-// Contact.jsx
 import './Contact.css'
 import theme_logo from '../../assets/infinity-design-img.png'
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa'
 import { useState } from 'react'
+import {InformationDetails,ContactText} from './ContactDynamicContent.js'
 
 function Contact() {
     const [status, setStatus] = useState("")
@@ -52,20 +52,20 @@ function Contact() {
             <div className="Contact-Section">
                 <div className="contact-Left">
                     <h1>Let's Talk</h1>
-                    <p>I am available for new projects. Feel free to send a message!</p>
+                    <p>{ContactText.ContactMessages}</p>
 
                     <div className="Contact-Details">
                         <div className="Contact-Detail">
                             <FaEnvelope size={24} color="#fff" />
-                            <p>webtechky4@gmail.com</p>
+                            <p>{InformationDetails.Email}</p>
                         </div>
                         <div className="Contact-Detail">
                             <FaPhoneAlt size={24} color="#fff" />
-                            <p>+91 8923891219</p>
+                            <p>{InformationDetails.Phone}</p>
                         </div>
                         <div className="Contact-Detail">
                             <FaMapMarkerAlt size={24} color="#fff" />
-                            <p>Chennai, Tamil Nadu, India</p>
+                            <p>{InformationDetails.Location}</p>
                         </div>
                     </div>
                 </div>
